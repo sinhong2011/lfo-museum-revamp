@@ -1,0 +1,48 @@
+erDiagram
+  character {
+    string character_id PK
+    string name
+    string description
+    string place_of_birth
+    string identity
+    string fight_style
+    string installation_version
+    string drawing
+    string r_id
+    string special_weapon_id FK
+    string special_equipment_id FK
+    string basic_action_id FK
+    string image_lib_id FK
+  }
+
+  skill {
+    string skill_id PK
+    string name
+    string cover
+    string demo
+    string logo
+    string combo_key
+    string consumption_capacity
+    string required_points
+    string trigger_condition
+    string remark
+    boolean is_tran
+    string character_id FK
+  }
+
+  ability {
+    string ability_id PK
+    string name
+    string cover
+    string demo
+    string logo
+    string combo_key
+    string consumption_capacity
+    string required_points
+    string trigger_condition
+    string remark
+    boolean is_advanced
+    string character_id FK
+  }
+
+  character ||--|{ skill : has
